@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid home-page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light upper-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/travel duqa logo-56.png" alt="Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <span class="nav-link"><i class="fas fa-envelope"></i> info@example.com</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link"><i class="fas fa-phone"></i> +1 (123) 456-7890</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="line-separation"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light lower-navbar ">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link animated-button btn-primary rounded-pill text-center" href="#" id="login">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-orange rounded-pill text-center" href="#">Cooperate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-orange rounded-pill text-center" href="#">Travel Seller</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <button class="close-overlay">&times;</button>
+            <a class="navbar-brand overlay-logo" href="#">
+                <img src="logo.png" alt="Logo" height="40">
+            </a>
+            <ul class="navbar-nav mt-3">
+                <li class="nav-item">
+                    <span class="nav-link"><i class="fas fa-envelope"></i> info@example.com</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link"><i class="fas fa-phone"></i> +1 (123) 456-7890</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animated-button btn-primary rounded-pill text-center" href="#" id="login-overlay">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-orange text-center" href="#">Cooperate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-orange rounded-pill text-center" href="#">Travel Seller</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="home-page2">
+        
+        <!-- Content -->
+        <div class="heading">
+            <h1>Get your all kenyan flight now here...</h1>
+            
+        </div>
+        <div class="flight-booking-form">
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="travel-from"><i class="fas fa-map-marker-alt"></i> Travel From</label>
+                    <input type="text" id="travel-from" name="travel-from" placeholder="Enter departure city">
+                </div>
+                <div class="form-group col">
+                    <label for="travel-to"><i class="fas fa-map-marker-alt"></i> Travel To</label>
+                    <input type="text" id="travel-to" name="travel-to" placeholder="Enter destination city">
+                </div>
+                <div class="form-group col">
+                    <label for="date-of-travel"><i class="fas fa-calendar-alt"></i> Date of Travel</label>
+                    <input type="text" id="date-of-travel" name="date-of-travel" placeholder="Select date" readonly>
+                </div>
+                <div class="form-group col">
+                    <label for="passengers"><i class="fas fa-user"></i> Passengers</label>
+                    <select id="passengers" name="passengers">
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-1 d-flex align-items-end">
+                    <button class="find-flight-btn"><i class="fas fa-plane animated-plane"></i> Find Flights</button>
+                </div>
+            </div>
+        </div>
+        <div class="rating-container">
+            <div class="user-info">
+                <img src="user-image.jpg" alt="User Image">
+                <span class="user-name">John Doe</span>
+            </div>
+            <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+
+        <div class="content">
+        <!-- Your website content goes here -->
+    </div>
+
+    <div class="chat-icon" id="chat-icon">
+        <i class="fas fa-comment-alt"></i>
+        <span id="chat-notification" class="notification">New Message</span>
+    </div>
+
+    <div class="chatbot" id="chatbot">
+        <div class="chat-header">
+            <span>Chatbot</span>
+            <button id="close-chat">Close</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    
+        <!-- Dark Mode / Light Mode Switch -->
+        <div class="switch">
+          <label class="switch-label" for="dark-mode-toggle">Dark Mode</label>
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider round"></span>
+      </div>
+    </section>  
+</div>
+
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

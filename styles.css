@@ -1,0 +1,332 @@
+/* Custom CSS styles */
+.upper-navbar {
+    padding: 0;
+}
+.upper-navbar .navbar-brand {
+    padding: 0;
+}
+.upper-navbar .nav-item {
+    padding: 1px 1px;
+}
+.lower-navbar .nav-item {
+    padding: 1px 5px;
+    box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
+}
+
+.container-fluid{
+    padding-right: var(--bs-gutter-x,0rem);
+    padding-left: var(--bs-gutter-x,0rem);
+
+}
+
+.lower-navbar{
+    box-shadow: 0 8px 16px rgb(64 83 252 / 64%);  
+}
+
+.line-separation {
+    height: 2px;
+    background-color: #ddd;
+}
+/* Animation for Call-to-Action button */
+.animated-button {
+    animation: pulse 1s infinite;
+    border-radius: 5px; /* Adjust the value as needed */
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+/* Button styles */
+.btn-primary {
+    background-color: #007bff; /* Blue */
+    color: white!important;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 15px;
+}
+.btn-orange {
+    background-color: #ff8500; /* Orange */
+    color: white!important;
+    padding: 5px;
+    font-weight: 700;
+}
+
+/* Button text alignment */
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+.overlay-content.active {
+    left: 0;
+}
+.close-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.overlay-logo {
+    display: block;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.home-page {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-size: cover;
+    background-image: url(images/beach-bg.jpg);
+    background-position: center;
+    position: fixed;
+  }
+
+  /* Custom CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.flight-booking-form {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.find-flight-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.find-flight-btn i {
+    margin-right: 5px;
+}
+
+/* Style the FontAwesome icons */
+.fa {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Custom CSS styles */
+/* ... (previous styles) ... */
+/* Dance animation for the airplane icon */
+@keyframes dance {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animated-plane {
+    animation: dance 1s infinite;
+}
+
+/* Blink animation for the "Find Flights" button */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.find-flight-btn {
+    background-color:orange!important;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: blink 1s infinite;
+    font-family: poppins;
+    font-weight: 700;
+}
+
+.find-flight-btn i {
+    margin-right: 5px;
+}
+.content {
+    /* Your content styling */
+    padding: 20px;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.chatbot {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-input {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e1e1e1;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.chat-input button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.notification {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #f00;
+    color: white;
+    padding: 3px 6px;
+    font-size: 10px;
+    border-radius: 50%;
+}
+
+
+
+/* ... (remaining styles) ... */
+@media (max-width: 576px) {
+    .form-row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .lower-navbar{
+        display: none;
+    }
+}
+
+.heading{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    color: #f4f4f4;
+
+}
+
+.home-page2{
+    justify-content: center;
+    padding-top: 5%;
+}
