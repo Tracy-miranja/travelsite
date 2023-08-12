@@ -35,13 +35,16 @@
         <div class="container">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link animated-button btn-primary rounded-pill text-center" href="#" id="login">Log In</a>
+                    <a class="nav-link animated-button btn-primary rounded-pill text-center" href="#" id="login">Get started</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-orange rounded-pill text-center" href="#">Cooperate</a>
+                    <a class="nav-link  btn-primary rounded-pill text-center" href="#" id="login">Log In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-orange rounded-pill text-center" href="#">Travel Seller</a>
+                    <a class="nav-link btn-orange text-center" href="#"><i class="fas fa-user icons"></i>Cooperate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-orange text-center" href="#"><i class="fas fa-briefcase icons"></i>Travel Seller</a>
                 </li>
             </ul>
         </div>
@@ -129,8 +132,49 @@
             </div>
         </div>
 
-        <div class="content">
-        <!-- Your website content goes here -->
+    <!-----rating-->
+    <!-- <div class="rate-container">
+        <div class="rate-card">
+            <div class="person-info">
+                <img src="person1.jpg" alt="Person's Image" class="person-image">
+                <h3 class="person-name">John Doe</h3>
+                <p class="person-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate aliquam eros ut tristique.</p>
+                <div class="rating">
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                    <i class="fas fa-star star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="rate-card">
+            
+        <button id="add-rating-button">Add Rating</button>
+    </div> -->
+
+    <div class="rate-container">
+        <button id="add-rating-button">Add Rating</button>
+        <div class="rating-carousel">
+            <!-- Dummy ratings will be displayed here -->
+        </div>
+    </div>
+    <div class="modal" id="rating-modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <h2>Add Rating</h2>
+            <form id="rating-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" min="1" max="5" required>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" required>
+                <button type="submit">Add Rating</button>
+            </form>
+        </div>
     </div>
 
     <div class="chat-icon" id="chat-icon">
@@ -158,8 +202,19 @@
           <input type="checkbox" id="dark-mode-toggle">
           <span class="slider round"></span>
       </div>
-    </section>  
-</div>
+    </section> 
+    </div>
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Need Help?</a>
+            <a href="#">Contact</a><br>
+            <p>&copy; 2023 Your Travel Website. All rights reserved.</p>
+        </div>
+        
+    </div>
+
+
 
 
     <script src="scripts.js"></script>

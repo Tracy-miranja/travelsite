@@ -89,3 +89,105 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display a welcome message when the user enters the page
     addMessage("bot", "Welcome to our website! How can I help you?");
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const addRatingButton = document.getElementById("add-rating-button");
+//     const rateCardContainer = document.querySelector(".rate-card");
+    
+//     addRatingButton.addEventListener("click", function() {
+//         const newRateCard = document.createElement("div");
+//         newRateCard.classList.add("rate-card");
+
+//         const newPersonInfo = document.createElement("div");
+//         newPersonInfo.classList.add("person-info");
+
+//         const newPersonImage = document.createElement("img");
+//         newPersonImage.src = "person2.jpg"; // Replace with the URL of the new person's image
+//         newPersonImage.alt = "New Person's Image";
+//         newPersonImage.classList.add("person-image");
+
+//         const newPersonName = document.createElement("h3");
+//         newPersonName.classList.add("person-name");
+//         newPersonName.textContent = "Jane Smith"; // Replace with the name of the new person
+
+//         const newPersonMessage = document.createElement("p");
+//         newPersonMessage.classList.add("person-message");
+//         newPersonMessage.textContent = "A new message goes here..."; // Replace with the new message
+
+//         const newRating = document.createElement("div");
+//         newRating.classList.add("rating");
+
+//         for (let i = 0; i < 5; i++) {
+//             const starIcon = document.createElement("i");
+//             starIcon.classList.add("fas", "fa-star", "star");
+//             newRating.appendChild(starIcon);
+//         }
+
+//         newPersonInfo.appendChild(newPersonImage);
+//         newPersonInfo.appendChild(newPersonName);
+//         newPersonInfo.appendChild(newPersonMessage);
+//         newPersonInfo.appendChild(newRating);
+//         newRateCard.appendChild(newPersonInfo);
+//         rateCardContainer.appendChild(newRateCard);
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const ratingCarousel = document.querySelector(".rating-carousel");
+
+    // Dummy ratings data
+    const dummyRatings = [
+        { name: "John Doe", message: "Lorem ipsum dolor sit amet.", rating: 4 },
+        { name: "Jane Smith", message: "Consectetur adipiscing elit.", rating: 5 },
+        { name: "Alice Johnson", message: "Vivamus vulputate aliquam eros ut tristique.", rating: 3 },
+        // Add more dummy ratings as needed
+    ];
+
+    // Populate the rating carousel with dummy ratings
+    for (const rating of dummyRatings) {
+        const ratingCard = createRatingCard(rating);
+        ratingCarousel.appendChild(ratingCard);
+    }
+
+    const ratingCards = document.querySelectorAll(".rating-card");
+    let currentSlide = 0;
+
+    // Function to create a rating card based on the rating data
+    function createRatingCard(rating) {
+        const ratingCard = document.createElement("div");
+        ratingCard.classList.add("rating-card");
+        ratingCard.innerHTML = `
+            <img src="person.png" alt="Person's Image" class="person-image">
+            <h3 class="person-name">${rating.name}</h3>
+            <p class="person-message">${rating.message}</p>
+            <div class="rating">
+                ${getStarIcons(rating.rating)}
+            </div>
+        `;
+        return ratingCard;
+    }
+
+    // Helper function to generate star icons based on rating
+    function getStarIcons(rating) {
+        let stars = "";
+        for (let i = 1; i <= 5; i++) {
+            const starClass = i <= rating ? "fas fa-star star" : "far fa-star star";
+            stars += `<i class="${starClass}"></i>`;
+        }
+        return stars;
+    }
+
+    // Function to show the next slide
+    function showNextSlide() {
+        ratingCards[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % ratingCards.length;
+        ratingCards[currentSlide].classList.add("active");
+    }
+
+    // Automatically show the next slide every 5 seconds
+    setInterval(showNextSlide, 5000);
+
+    // Show the first slide initially
+    ratingCards[currentSlide].classList.add("active");
+});
+

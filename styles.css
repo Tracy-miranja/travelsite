@@ -128,7 +128,15 @@ body {
     font-family: poppins, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #1d0909;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 3.5%;
 }
 
 .flight-booking-form {
@@ -345,10 +353,179 @@ button.find-flight-btn i {
     margin-right: 10px; /* Adjust the space between icons */
 }
 
+/* rating */
+.rate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
 
+.rate-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    /* background-color: white; */
+}
+
+.person-info {
+    text-align: center;
+}
+
+.person-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.person-name {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.person-message {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.rating {
+    color: #f8d32a; /* Yellow color for rated stars */
+    font-size: 18px;
+}
+
+.star {
+    margin-right: 5px;
+}
+
+#add-rating-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-rating-button:hover {
+    background-color: #0056b3;
+}
+
+/* rating2 */
+/* Custom CSS styles */
+/* You can customize the styles here */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.rate-container {
+    text-align: center;
+    /* margin-top: 20px; */
+}
+
+.rating-carousel {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.rating-card {
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin: 0 10px;
+    box-sizing: border-box;
+    display: none;
+    transition: transform 1s ease-in-out;
+}
+
+.rating-card.active {
+    display: block;
+}
+
+.person-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.person-name {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.person-message {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.rating {
+    color: #f8d32a;
+    font-size: 18px;
+}
+
+.star {
+    margin-right: 5px;
+}
+
+/* .footer{
+    height: 30px;
+    background-color: #f00;
+    width: 100%;
+    margin-bottom: 0px;
+} */
+
+/* Add the following CSS to your existing styles.css file */
+/* ... (previous styles) ... */
+
+/* Updated footer styles */
+.footer {
+    background-color: rgb(255, 81, 0);
+    padding: 1px 0;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between links as needed */
+    margin-bottom: 10px; /* Added margin to separate links from the copyright text */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
 
 /* ... (remaining styles) ... */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .form-row {
         flex-direction: column;
         justify-content: center;
