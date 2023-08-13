@@ -431,18 +431,27 @@ body {
 }
 
 .rating-carousel {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    height: 150px;
-    overflow: hidden;
-    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
 
+.rating-carousel:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Lighten the background on hover */
+    backdrop-filter: blur(15px); /* Increase the blur on hover */
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+
+/* Rest of your existing styles ... */
+
+
 .rating-card {
-    width: 300px;
-    height: 250px;
+    width: auto;
+    height: auto;
     padding: 20px;
     text-align: center;
     border: 1px solid #ccc;
@@ -451,6 +460,7 @@ body {
     box-sizing: border-box;
     display: none;
     transition: transform 1s ease-in-out;
+    border-radius: 5px;
 }
 
 .rating-card.active {
