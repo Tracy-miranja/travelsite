@@ -97,14 +97,24 @@
         </div>
     </div>
     
-    <section class="home-page2">
-        
+    <section class="home-page2"> 
         <!-- Content -->
         <div class="heading">
-            <h1>Get your all kenyan flight now here...</h1>
-            
+            <h1>Get your all kenyan flight now here...</h1>  
         </div>
         <div class="flight-booking-form">
+            <div class="form-row">
+                <div class="form-group col">
+                    <div class="trip-type-buttons">
+                        <label>
+                            <input type="radio" name="trip-type" value="one-way" checked> One-Way
+                        </label>
+                        <label>
+                            <input type="radio" name="trip-type" value="return"> Return Trip
+                        </label>
+                    </div>
+                </div>
+            </div>
             <div class="form-row">
                 <div class="form-group col">
                     <label for="travel-from"><i class="fas fa-map-marker-alt"></i> Travel From</label>
@@ -131,51 +141,30 @@
                 </div>
             </div>
         </div>
-
-    <!-----rating-->
-    <!-- <div class="rate-container">
-        <div class="rate-card">
-            <div class="person-info">
-                <img src="person1.jpg" alt="Person's Image" class="person-image">
-                <h3 class="person-name">John Doe</h3>
-                <p class="person-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate aliquam eros ut tristique.</p>
-                <div class="rating">
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                    <i class="fas fa-star star"></i>
-                </div>
+        <div class="rate-container">
+            <button id="add-rating-button">Add Rating</button>
+            <div class="rating-carousel">
+                <!-- Dummy ratings will be displayed here -->
             </div>
         </div>
-        <div class="rate-card">
-            
-        <button id="add-rating-button">Add Rating</button>
-    </div> -->
-
-    <div class="rate-container">
-        <button id="add-rating-button">Add Rating</button>
-        <div class="rating-carousel">
-            <!-- Dummy ratings will be displayed here -->
+        <div class="modal" id="rating-modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <h2>Add Rating</h2>
+                <form id="rating-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" min="1" max="5" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="4" required></textarea>
+                    <label for="image">Image URL:</label>
+                    <input type="text" id="image" required>
+                    <button type="submit">Add Rating</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="modal" id="rating-modal">
-        <div class="modal-content">
-            <span class="close-button" id="close-modal">&times;</span>
-            <h2>Add Rating</h2>
-            <form id="rating-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-                <label for="rating">Rating:</label>
-                <input type="number" id="rating" min="1" max="5" required>
-                <label for="message">Message:</label>
-                <textarea id="message" rows="4" required></textarea>
-                <label for="image">Image URL:</label>
-                <input type="text" id="image" required>
-                <button type="submit">Add Rating</button>
-            </form>
-        </div>
-    </div>
+    
 
     <div class="chat-icon" id="chat-icon">
         <i class="fas fa-comment-alt"></i>
@@ -203,7 +192,6 @@
           <span class="slider round"></span>
       </div>
     </section> 
-    </div>
     <div class="footer">
         <div class="footer-links">
             <a href="#">About</a>

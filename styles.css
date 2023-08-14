@@ -510,6 +510,7 @@ body {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease-in-out;
+    text-align: center;
 }
 
 .footer-links a:hover {
@@ -525,6 +526,13 @@ body {
 
     .lower-navbar{
         display: none;
+    }
+
+    .rate-container{
+        display: none;
+    }
+    .footer{
+        display: none ;
     }
 }
 
